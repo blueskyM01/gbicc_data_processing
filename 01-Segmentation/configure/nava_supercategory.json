@@ -1,0 +1,18 @@
+{
+    "1":"car",
+    "2": "truck",
+    "3": "truck",
+    "4": "truck",
+    "5": "truck",
+    "6": "operating vehicles",
+    "7": "pedestrian",
+    "8": "bicycle and tricycle",
+    "9": "rider",
+    "10": "carton",
+    "11": "standard pallet",
+    "12": "other pallet",
+    "13": "road",
+    "14": "ego-car",
+    "15": "ignore",
+    "0": "background"
+}

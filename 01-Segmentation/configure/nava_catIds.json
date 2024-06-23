@@ -1,0 +1,18 @@
+{
+    "background": 0,
+    "car": 1,
+    "van_truck": 2,
+    "flatbed_truck": 3,
+    "tralier": 4,
+    "other_truck": 5,
+    "operating vehicles": 6,
+    "pedestrian": 7,
+    "bicycle_and_tricycle": 8,
+    "rider": 9,
+    "carton": 10,
+    "standard pallet": 11,
+    "other_pallet": 12,
+    "road": 13,
+    "ego-car": 14,
+    "ignore": 15
+}
