@@ -34,9 +34,10 @@ class CocoToSingleJson:
             
             images = dict_f['images']
             image_name = images[0]['file_name']
+            print("Processing " + image_name)
             img = cv2.imread(os.path.join(self.image_save_dir, image_name))
             annotations = dict_f['annotations']
-            for annotation in annotations:
+            for i, annotation in enumerate(annotations):
                 cls = annotation['category_id']
                 segmentation = annotation['segmentation']
                 segs_np = []
@@ -45,6 +46,7 @@ class CocoToSingleJson:
                     seg_np = np.array(seg, dtype=np.int32).reshape([-1,2])
                     segs_np.append(seg_np)
                 img_s = cv2.drawContours(img, segs_np, -1, color, 3)
+                cv2.putText(img, str(cls), (10, 30+i*30), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 5, cv2.LINE_AA)
                 cv2.imwrite(os.path.join(self.visulizaiton_save_dir, image_name), img_s)
             
             
